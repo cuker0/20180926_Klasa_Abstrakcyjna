@@ -10,6 +10,11 @@ namespace _20180926_Klasa_Abstrakcyjna
     {
         static void Main(string[] args)
         {
+            Figure Square = new Square(3);
+            Square.Show();
+
+            Figure Circle = new Circle(5);
+            Circle.Show();
         }
     }
 }
