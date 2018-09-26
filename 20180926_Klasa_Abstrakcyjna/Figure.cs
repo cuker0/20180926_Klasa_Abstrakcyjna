@@ -13,8 +13,7 @@ namespace _20180926_Klasa_Abstrakcyjna
 
         public virtual void Show()
         {
-            Console.WriteLine($"Area: {Area()}, Perimeter: {Perimeter()}");
-            Console.ReadLine();
+            Console.WriteLine($"Area: {Area()}, Perimeter: {Perimeter()}\n");         
         }
     }
 }

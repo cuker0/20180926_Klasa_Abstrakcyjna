@@ -24,14 +24,12 @@ namespace _20180926_Klasa_Abstrakcyjna
         {
             return (4 * A);
         }
-        public double Diagonal()
+
+        public override void Show()
         {
-            return Math.Sqrt(2)*A;
+            Console.WriteLine("I'm Square");
+            base.Show();
+            
         }
-        //public override void Show()
-        //{
-        //    Console.WriteLine($"Area: {Area()},Perimeter: {Perimeter()}, Diagonal {Diagonal()}");
-        //    Console.ReadKey();
-        //}
     }
 }

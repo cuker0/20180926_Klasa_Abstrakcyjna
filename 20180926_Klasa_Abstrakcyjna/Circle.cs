@@ -10,19 +10,26 @@ namespace _20180926_Klasa_Abstrakcyjna
     {
         public double Radius { get; private set; }
 
-        public Circle(int r)
+        public Circle(double r)
         {
             Radius = r;
         }
 
         public override double Area()
         {
-            return Math.PI * Math.Pow(Radius, 2);
+            return Math.Round((Math.PI * Math.Pow(Radius, 2)),4);
         }
 
         public override double Perimeter()
         {
-            return 2 * Math.PI * Radius;
+            return Math.Round((2 * Math.PI * Radius),4);
+        }
+
+        public override void Show()
+        {
+            Console.WriteLine("I'm Circle");
+            base.Show();
+            
         }
     }
 }
