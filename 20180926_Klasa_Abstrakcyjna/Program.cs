@@ -11,11 +11,12 @@ namespace _20180926_Klasa_Abstrakcyjna
         static void Main(string[] args)
         {
         
-            Figure[] figures = new Figure[3];
+            Figure[] figures = new Figure[4];
 
             figures[0] = new Square(2);
             figures[1] = new Circle(3.14);
             figures[2] = new Square(5);
+            figures[3] = new Triangle(25,66);
 
             foreach (Figure figure in figures)
             {
