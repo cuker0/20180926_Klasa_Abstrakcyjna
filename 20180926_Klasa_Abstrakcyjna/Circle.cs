@@ -9,7 +9,8 @@ namespace _20180926_Klasa_Abstrakcyjna
     class Circle : Figure
     {
         public double Radius { get; private set; }
-
+       
+    
         public Circle(double r)
         {
             Radius = r;
@@ -23,14 +24,14 @@ namespace _20180926_Klasa_Abstrakcyjna
         public override double Perimeter()
         {
             return Math.Round((2 * Math.PI * Radius),4);
-        }
+        }     
 
         public override void Show()  //ctrl+. -> generatre overrides
         {
             Console.WriteLine("I'm Circle");
             
             base.Show();
-            
+         
         }
     }
 }

@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 namespace _20180926_Klasa_Abstrakcyjna
 {
     class Program
-    {
+    {    
+
         static void Main(string[] args)
         {
-        
-            Figure[] figures = new Figure[5];
+
+            
+
+        Figure[] figures = new Figure[5];
 
             figures[0] = new Square(2);
             figures[1] = new Circle(3.14);
@@ -24,6 +27,7 @@ namespace _20180926_Klasa_Abstrakcyjna
                 figure.Show();
             }
             Console.ReadLine();
+            
         }
     }
 }

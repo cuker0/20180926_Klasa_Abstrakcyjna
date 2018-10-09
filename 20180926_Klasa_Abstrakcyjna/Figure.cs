@@ -10,7 +10,7 @@ namespace _20180926_Klasa_Abstrakcyjna
     {
         public abstract double Area();
         public abstract double Perimeter();
-
+        
         public virtual void Show()
         {
             Console.WriteLine($"Area: {Area()}, Perimeter: {Perimeter()}\n");         
