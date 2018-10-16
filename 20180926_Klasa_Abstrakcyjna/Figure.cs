@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace _20180926_Klasa_Abstrakcyjna
 {
+    public enum Colors
+    {
+        White,
+        Yellow,
+        Blue,
+        Green,
+        Red,
+        Orange
+    }
+
     abstract class Figure
     {
         public abstract double Area();
         public abstract double Perimeter();
-        
+
+        public Colors Color { get; set; }
+
         public virtual void Show()
         {
             Console.WriteLine($"Area: {Area()}, Perimeter: {Perimeter()}\n");         
