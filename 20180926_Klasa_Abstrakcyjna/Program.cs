@@ -11,8 +11,9 @@ namespace _20180926_Klasa_Abstrakcyjna
 
         static void Main(string[] args)
         {
-
+            TestList();
             
+        
 
         Figure[] figures = new Figure[5];
 
@@ -32,6 +33,91 @@ namespace _20180926_Klasa_Abstrakcyjna
             Circle cir = new Circle(3);
 
             sq.CompareTo(cir);
+            
+           
+        }
+
+        static void TestList()
+        {
+            // inicjalizacja listy
+            List<string> names = new List<string>()
+        {
+            "Piotr",
+            "Adam",
+            "Marcin",
+            "Andrzej",
+            "Robert"
+        };
+
+            PrintList(names);
+
+            names.Add("Marcin");
+            names.Insert(0,"Krzysiek");
+            PrintList(names);
+
+         //   names.Remove("Adam");
+         //   PrintList(names);
+
+            names.RemoveAt(names.Count-1);
+            PrintList(names);
+
+            Console.WriteLine($"Moje imie jest pod indeksem: {names.IndexOf("Marcin")}");
+
+            Console.WriteLine($"Czy na liscie znajduje sie imie Anastazy: { names.Contains("Anastazy") }");
+
+            PrintList(names.FindAll(LongerThan5));
+
+         //   names.RemoveAll(name => (name.Length % 2) != 0);
+
+          //  names.Sort(CompareStringLength); // sortowanie od najkrotszego do najdluzszego
+            PrintList(names);
+
+            names.Sort((x, y) =>
+            {
+                int result = 0;
+                if (x.Length > y.Length)
+                    result = 1;
+                else if (x.Length < y.Length)
+                    result = -1;
+                return result;
+            });
+
+            names.Clear();
+            PrintList(names);
+
+            Console.ReadLine();
+        }
+
+        /*
+        static int comparestringlength(string x, string y)
+        {
+            int result = 0;
+            if (x.length > y.length)
+                result = 1;
+            else if (x.length < y.length)
+                result = -1;
+            return result;
+        }
+        */
+
+        static bool LongerThan5(string str)
+        {
+            return str.Length > 5;
+        }
+
+        
+        static void PrintList(IEnumerable<string> list)
+        {
+            Console.WriteLine("#############################");
+            Console.WriteLine("Items in list");
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine(Environment.NewLine);
         }
     }
+   
 }
