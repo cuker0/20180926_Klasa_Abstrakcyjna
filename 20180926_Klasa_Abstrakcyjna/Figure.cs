@@ -16,7 +16,7 @@ namespace _20180926_Klasa_Abstrakcyjna
         Orange
     }
 
-   abstract class Figure : IPrintable, IMovable
+   abstract class Figure : IPrintable, IMovable, IComparable<Figure>
     {
         public abstract double Area();
         public abstract double Perimeter();
@@ -32,5 +32,20 @@ namespace _20180926_Klasa_Abstrakcyjna
         {
             throw new NotImplementedException();
         }
+
+        public int CompareTo(Figure other)
+        {
+            int result = 0;
+
+            if (this.Area() == other.Area()) result = 0;
+
+            else if (this.Area() > other.Area()) result = -1;
+
+            else if (this.Area() < other.Area()) result = 1;
+
+            return result;
+           
+        }
     }
 }
+

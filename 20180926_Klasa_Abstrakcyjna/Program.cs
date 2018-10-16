@@ -27,7 +27,11 @@ namespace _20180926_Klasa_Abstrakcyjna
                 figure.Show();
             }
             Console.ReadLine();
-            
+
+            Square sq = new Square(2);
+            Circle cir = new Circle(3);
+
+            sq.CompareTo(cir);
         }
     }
 }

@@ -28,6 +28,7 @@ namespace _20180926_Klasa_Abstrakcyjna
         public override void Show()
         {
             Console.WriteLine("I'm Square");
+            Area();
             base.Show();
             
         }
