@@ -43,14 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Airplane.cs" />
+    <Compile Include="Car.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="Figure.cs" />
+    <Compile Include="IMovable.cs" />
+    <Compile Include="IPrintable.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Triangle.cs" />
+    <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

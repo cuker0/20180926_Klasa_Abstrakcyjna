@@ -26,7 +26,7 @@ namespace _20180926_Klasa_Abstrakcyjna
             return Math.Round((2 * Math.PI * Radius),4);
         }     
 
-        public override void Show()  //ctrl+. -> generatre overrides
+        public override void Show()
         {
             Console.WriteLine("I'm Circle");
             

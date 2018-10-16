@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _20180926_Klasa_Abstrakcyjna
 {
-    class Program
+    class Program 
     {    
 
         static void Main(string[] args)

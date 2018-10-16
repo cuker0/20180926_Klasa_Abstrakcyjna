@@ -16,7 +16,7 @@ namespace _20180926_Klasa_Abstrakcyjna
         Orange
     }
 
-    abstract class Figure
+   abstract class Figure : IPrintable, IMovable
     {
         public abstract double Area();
         public abstract double Perimeter();
@@ -26,6 +26,11 @@ namespace _20180926_Klasa_Abstrakcyjna
         public virtual void Show()
         {
             Console.WriteLine($"Area: {Area()}, Perimeter: {Perimeter()}\n");         
+        }
+
+        public void Move()
+        {
+            throw new NotImplementedException();
         }
     }
 }
