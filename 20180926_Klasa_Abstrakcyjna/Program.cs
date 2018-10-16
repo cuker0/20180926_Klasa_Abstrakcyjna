@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace _20180926_Klasa_Abstrakcyjna
 {
-    class Program 
-    {    
+    class Program
+    {
 
         static void Main(string[] args)
         {
-            TestList();
-            
-        
+            //    TestList();
 
-        Figure[] figures = new Figure[5];
+            FigureList();
+            Console.ReadKey();
+            return;
+            /*
+
+
+            Figure[] figures = new Figure[5];
 
             figures[0] = new Square(2);
             figures[1] = new Circle(3.14);
             figures[2] = new Square(5);
-            figures[3] = new Triangle(25,66);
+            figures[3] = new Triangle(25, 66);
             figures[4] = new Rectangle(2, 4);
 
             foreach (Figure figure in figures)
@@ -33,8 +37,8 @@ namespace _20180926_Klasa_Abstrakcyjna
             Circle cir = new Circle(3);
 
             sq.CompareTo(cir);
-            
-           
+            */
+
         }
 
         static void TestList()
@@ -49,28 +53,28 @@ namespace _20180926_Klasa_Abstrakcyjna
             "Robert"
         };
 
-            PrintList(names);
+            //PrintList(names);
 
             names.Add("Marcin");
-            names.Insert(0,"Krzysiek");
-            PrintList(names);
-
-         //   names.Remove("Adam");
+            names.Insert(0, "Krzysiek");
          //   PrintList(names);
 
-            names.RemoveAt(names.Count-1);
-            PrintList(names);
+            //   names.Remove("Adam");
+            //   PrintList(names);
+
+            names.RemoveAt(names.Count - 1);
+        //    PrintList(names);
 
             Console.WriteLine($"Moje imie jest pod indeksem: {names.IndexOf("Marcin")}");
 
             Console.WriteLine($"Czy na liscie znajduje sie imie Anastazy: { names.Contains("Anastazy") }");
 
-            PrintList(names.FindAll(LongerThan5));
+        //    PrintList(names.FindAll(LongerThan5));
 
-         //   names.RemoveAll(name => (name.Length % 2) != 0);
+            //   names.RemoveAll(name => (name.Length % 2) != 0);
 
-          //  names.Sort(CompareStringLength); // sortowanie od najkrotszego do najdluzszego
-            PrintList(names);
+            //  names.Sort(CompareStringLength); // sortowanie od najkrotszego do najdluzszego
+         //   PrintList(names);
 
             names.Sort((x, y) =>
             {
@@ -83,7 +87,7 @@ namespace _20180926_Klasa_Abstrakcyjna
             });
 
             names.Clear();
-            PrintList(names);
+        //    PrintList(names);
 
             Console.ReadLine();
         }
@@ -105,19 +109,40 @@ namespace _20180926_Klasa_Abstrakcyjna
             return str.Length > 5;
         }
 
-        
-        static void PrintList(IEnumerable<string> list)
+        private static void FigureList()
         {
-            Console.WriteLine("#############################");
-            Console.WriteLine("Items in list");
+            List<Figure> figurelist = new List<Figure>()
+             {
+            new Square(2),
+            new Triangle(2, 5),
+            new Circle(5),
+            new Circle(6),
+            new Rectangle(5,7)
+             };
 
-            foreach (var item in list)
+            figurelist.Sort();
+
+            foreach (var item in figurelist)
             {
-                Console.WriteLine(item);
+                item.Show();
             }
-
-            Console.WriteLine(Environment.NewLine);
         }
+        
+
     }
-   
+    /*
+    static void PrintList(IEnumerable<string> list)
+    {
+        Console.WriteLine("#############################");
+        Console.WriteLine("Items in list");
+
+        foreach (var item in list)
+        {
+            Console.WriteLine(item);
+        }
+
+        Console.WriteLine(Environment.NewLine);
+    }
+    */
 }
+

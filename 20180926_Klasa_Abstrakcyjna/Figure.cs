@@ -39,9 +39,9 @@ namespace _20180926_Klasa_Abstrakcyjna
 
             if (this.Area() == other.Area()) result = 0;
 
-            else if (this.Area() > other.Area()) result = -1;
+            else if (this.Area() > other.Area()) result = 1;
 
-            else if (this.Area() < other.Area()) result = 1;
+            else if (this.Area() < other.Area()) result = -1;
 
             return result;
            
